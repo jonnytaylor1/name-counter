@@ -19,7 +19,7 @@ class NameCounter {
 
 
   let counterArray: Array<NameCounter> = []
-
+  let counter: number = 0;
 
   const fileReader =()=>{  
     let lineReaderText = require('readline').createInterface({
@@ -27,26 +27,36 @@ class NameCounter {
     });
     lineReaderText.on('line', function (line: string) {
       counterArray.forEach((nameCounter, i)=>{
-        // if(i==0){
         let name = nameCounter.name;
         // let name = 'Andrew'
         let uppercaseName = name.toUpperCase();
         let testVariable = '('+name+'|'+uppercaseName+')'
 
         // let re = new RegExp(testVariable);
-        let re2 = new RegExp('^(.*[\W\'\"(\-_]+)?'+testVariable+'([\W\'\")_,!?\.;:\-]+.*)?$');
+        let re2 = new RegExp('(.*[\W_\'(",-]+|^)'+testVariable+'([.,_";!:\?-]+.*$|[\?,]\'$|[\!\?<>\":;{}\[\]@£$%^&\*()_+=,-]+\'|\'[sS][\!\?<>\":;{}\[\]@£$%^&\*()_+=,-]+.*|\'[Ss]|\'$|$)');
+       
+        //Oliver is working now
+        //Test Don
+        //Test all others
+        //Simplify regex
+        //Make faster
+    
+        
+        
+        
+        
         let lineArray: Array<string> = line.split(' ').filter(word=> re2.test(word) ? word:null);
         // let lineArray: Array<string> = line.split(' ').filter(word=> re.test(word) && !re2.test(word) ? word:null);
         lineArray.forEach(word=>{
-          if(word!=="Don't")
           // console.log(word);
+          // counter++
           counterArray[i].incrementCounter()
-        })
-      // } 
+        }) 
       })  
     });
     lineReaderText.on('close', () => {
-      // console.log('finished');
+      console.log('finished');
+      // console.log(counter);
       let sortedArray = counterArray.sort((nc1, nc2)=>{
         const count1 = nc1.count;
         const count2 = nc2.count;
