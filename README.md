@@ -2,6 +2,6 @@
 
 Download the source code
 
-# To run
+**To run**
 
 npm start
