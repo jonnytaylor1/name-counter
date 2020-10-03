@@ -2,10 +2,10 @@
 
 ## To run
 
-Download the source code
+1. Download the source code
 
-Open terminal
+2. Open terminal
 
-npm install
+3. npm install
 
-npm start
+4. npm start
