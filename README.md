@@ -1,7 +1,7 @@
 # name-counter
 
-Download the source code
-
 **To run**
 
+Download the source code
+Open terminal
 npm start
