@@ -6,4 +6,6 @@ Download the source code
 
 Open terminal
 
+npm install
+
 npm start

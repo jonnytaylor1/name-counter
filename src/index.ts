@@ -95,22 +95,3 @@ class NameCounter {
       console.error(err);
     }
   })();
-
-
-  //steps
-  //1. learn typescript syntax
-  //2. look up method to read file
-  //3. count number of lines being read and check it matches up
-  //4. search all oliver and check it matches how many are actually in file
-  //5. recognised Oliver's, OLIVER, prefix and suffix was missed
-
-
-
-  //decisions:
-
-  //1. filter by capital first letter saves having to compare all letters in each word
-  //2. not to remove each array that has length of 0 (saves having to find the length of each array)
-  //3. realised that sometimes the first letter may not be a capital
-  //4. regex cannot ignore case of name in text. Because names like Soon
-  //5. changed regex so that Don't was not returned for Don but Don's would still be returned
-  //6. Make faster
